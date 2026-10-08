@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Student Management System</h1>
+        <p>Manage student records easily</p>
+    </header>
+
+    <main>
+
+        <!-- Add Student Section -->
+        <section class="form-section">
+
+            <h2 id="form-title">Add New Student</h2>
+
+            <form id="student-form">
+
+                <input
+                    type="hidden"
+                    id="student-id"
+                >
+
+                <div class="form-group">
+                    <label for="name">Student Name</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter student name"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter email address"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+
+                    <input
+                        type="text"
+                        id="phone"
+                        placeholder="Enter phone number"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="course">Course</label>
+
+                    <input
+                        type="text"
+                        id="course"
+                        placeholder="Example: B.Tech Computer Science"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="year">Year</label>
+
+                    <select id="year" required>
+                        <option value="">Select Year</option>
+                        <option value="1">1st Year</option>
+                        <option value="2">2nd Year</option>
+                        <option value="3">3rd Year</option>
+                        <option value="4">4th Year</option>
+                    </select>
+                </div>
+
+                <button type="submit" id="submit-button">
+                    Add Student
+                </button>
+
+                <button
+                    type="button"
+                    id="cancel-button"
+                    class="cancel-button"
+                    style="display: none;"
+                >
+                    Cancel
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- Student List Section -->
+        <section class="students-section">
+
+            <div class="section-header">
+                <h2>Student Records</h2>
+
+                <input
+                    type="text"
+                    id="search"
+                    placeholder="Search students..."
+                >
+            </div>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Course</th>
+                            <th>Year</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="student-list">
+                        <!-- Students will appear here -->
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <p id="no-students">
+                No students found.
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Student Management System © 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
